@@ -24,12 +24,12 @@ module.exports = function(environment) {
   };
 
     ENV.stripe = {
-        publishableKey: 'pk_test_k0u4Z9UVu9WqC3mNybqk0qjb'
+        publishableKey: 'pk_test_yours'
     };
 
     ENV['ember-cli-mirage'] = {
-    enabled: false
-  };
+      enabled: false
+    };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
