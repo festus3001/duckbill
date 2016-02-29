@@ -1,7 +1,7 @@
-# Duck-bill
+# Duck-bill Ember 2.3.0 Frontend
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is an exercise in getting Ember to talk to the stripe payment service. 
+
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ You will need the following things properly installed on your computer.
 * [Node.js](http://nodejs.org/) (with NPM)
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+
 
 ## Installation
 
@@ -36,15 +36,12 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Building
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+* `cd ..` 
+* `ember build --environment=production --output-path=../public/` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
-
+* [stripe.js](https://stripe.com/docs/api#intro)
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://www.ember-cli.com/)
 * Development Browser Extensions
