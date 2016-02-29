@@ -36,7 +36,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Building
 
-* `cd ..` 
 * `ember build --environment=production --output-path=../public/` (production)
 
 

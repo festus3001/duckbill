@@ -1,7 +1,7 @@
 # Duck-bill : Node - Express 4.0 - Ember 2.3 - Stripe API. 
 
 
-	Here is a bit more of a complete example on how to do coupons, invoices, and payment plans using stripe.
+	Here is a bit more of an example on how to do coupons, discounts and payment plans using stripe.
 
 	Most calls will be run through the back end node/express api except for the card numbers to token creation.
 	For the back end server.js we will be using the official stripe libriary for node.js.
@@ -11,7 +11,7 @@
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/festus3001/duckbill.git` this repository
 * change into the new directory
 * `npm install`
 * cd into the front end.
