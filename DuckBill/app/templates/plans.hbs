@@ -1,0 +1,32 @@
+
+
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div class="jumbotron">
+<ul>
+{{#each model as |plan|}}
+<li>{{plan.name}}
+</li>
+{{/each}}
+</ul>
+
+
+
+<select onchange={{action (mut vehicleIndex) value="target.value"}}>
+  {{#each vehicles as |vehicleChoice index|}}
+    <option value={{ index }} selected={{eq vehicleIndex index}}>{{vehicleChoice.name}}</option>
+  {{/each}}
+</select>
+
+
+
+<a href="" class="btn btn-hg btn-embossed btn-block btn-primary" {{action 'toStepTwo'}} >Next</a>
+
+{{outlet}}
+</div>
+</div>
+</div>
+</div>
