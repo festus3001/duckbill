@@ -15,7 +15,7 @@
 
 			console.log('plans');
 
-			var stripe = require('stripe')('sk_test_C3Lyo54fnUuOLU1SQ9XD4d5l');
+			var stripe = require('stripe')('sk_test_yours');
 
 			stripe.plans.list(
  				 { limit: 30 },
@@ -36,7 +36,7 @@
 
 			console.log('customers');
 
-			var stripe = require('stripe')('sk_test_C3Lyo54fnUuOLU1SQ9XD4d5l');
+			var stripe = require('stripe')('sk_test_yours');
 
 			stripe.customers.list(
   				function(err, customers) {
@@ -59,7 +59,7 @@
 
 			console.log('coupons');
 
-			var stripe = require('stripe')('sk_test_C3Lyo54fnUuOLU1SQ9XD4d5l');
+			var stripe = require('stripe')('sk_test_yours');
 
 			stripe.coupons.list(
   				function(err, coupons) {
@@ -85,7 +85,7 @@
 
 			var couponId = req.params.couponId;
 
-			var stripe = require('stripe')('sk_test_C3Lyo54fnUuOLU1SQ9XD4d5l');
+			var stripe = require('stripe')('sk_test_yours');
 
 			stripe.coupons.retrieve(couponId,
   				function(err, coupon) {
@@ -118,7 +118,7 @@
 
   			
 
-			var stripe = require('stripe')('sk_test_C3Lyo54fnUuOLU1SQ9XD4d5l');
+			var stripe = require('stripe')('sk_test_yours');
 
 			// ember sends req.body
 			// { firstName: null, lastName: null, stripeToken: 'tok_17isuGGh9KUxDTDqJzg6Wg4m' }
@@ -159,7 +159,7 @@
 
 			console.log(req.body.plan);
 
-			var stripe = require('stripe')('sk_test_C3Lyo54fnUuOLU1SQ9XD4d5l');
+			var stripe = require('stripe')('sk_test_yours');
 
 			// ember sends req.body
 			// { customer: 'cus_7yqbPhH5syR5Yp', plan: 'Monthy' }
