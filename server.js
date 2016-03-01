@@ -9,10 +9,6 @@ npm install --save-dev stripe
 npm install --save-dev body-parser
 */
 
-// dla@flazeebo.com / 1905414589
-
-//  sk_test_C3Lyo54fnUuOLU1SQ9XD4d5l 
-//  pk_test_k0u4Z9UVu9WqC3mNybqk0qjb 
 
 
 var express = require('express');
