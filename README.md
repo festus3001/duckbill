@@ -19,9 +19,6 @@
 * `npm install`
 * `bower install`
 
-## Build it yourself
-
-
 
 ## Running / Development
 
