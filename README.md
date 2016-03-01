@@ -35,7 +35,6 @@
 * `export NODE_ENV=development`
 * `export NODE_PORT=3000`
 * `export STRIPE_SECRET_KEY=sk_test_yours`
-
 * `nodemon server.js`
 
 * Then in a second terminal:
