@@ -10,8 +10,9 @@ export default Ember.Controller.extend({
   discountCode: '',
   total: 0,
 
-  fname:null,
-  lname:null,
+  fname: '',
+  lname: '',
+  email:'dla223@flazeebo.com',
 
 
   number: '4012888888881881',
@@ -74,8 +75,9 @@ stripe: Ember.inject.service(),
         },
         signup() {
           console.log(" signup called ");
+
            var self = this; // Store away current this
-           this.set('message', 'called');
+           this.set('message', 'signup');
 
           // let's get a token from stripe so we can get to business
           this.stripeCreateToken().then(function(response) {
@@ -94,6 +96,7 @@ stripe: Ember.inject.service(),
 
 
             });
+
 
            
             customer.save().then(function(response) {  // customer

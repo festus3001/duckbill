@@ -67,7 +67,7 @@ define('duck-bill/tests/controllers/signup.jshint', ['exports'], function (expor
   QUnit.module('JSHint - controllers');
   QUnit.test('controllers/signup.js should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/signup.js should pass jshint.\ncontrollers/signup.js: line 81, col 50, \'response\' is defined but never used.\n\n1 error');
+    assert.ok(false, 'controllers/signup.js should pass jshint.\ncontrollers/signup.js: line 83, col 50, \'response\' is defined but never used.\n\n1 error');
   });
 });
 define('duck-bill/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {

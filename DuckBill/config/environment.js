@@ -18,13 +18,12 @@ module.exports = function(environment) {
       // when it is created
     },
      LOG_STRIPE_SERVICE: true
-
-
-
   };
 
+   console.log(process.env.STRIPE_PUBLISHABLE_KEY);
+   
     ENV.stripe = {
-        publishableKey: 'pk_test_yours'
+        publishableKey: process.env.STRIPE_PUBLISHABLE_KEY
     };
 
     ENV['ember-cli-mirage'] = {

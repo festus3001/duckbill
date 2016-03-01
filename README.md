@@ -30,11 +30,20 @@
 ## Running / Development
 
 * It seems easiest to run the node server on one terminal:
+
+
+* `export NODE_ENV=development`
+* `export NODE_PORT=3000`
+* `export STRIPE_SECRET_KEY=sk_test_yours`
+
 * `nodemon server.js`
 
 * Then in a second terminal:
 * cd into the front end.
 * cd DuckBill
+* `export NODE_ENV=development`
+* `export NODE_PORT=3000`
+* `export STRIPE_PUBLISHABLE_KEY=pk_test_yours`
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 

@@ -4,8 +4,6 @@
  module.exports = function(app) {
 
 
-
-
 		app.get('/api/',function(req,res) {
 			res.send('Working');
 		});
@@ -15,7 +13,7 @@
 
 			console.log('plans');
 
-			var stripe = require('stripe')('sk_test_yours');
+			var stripe = require('stripe')(stripeApiSecretKey);
 
 			stripe.plans.list(
  				 { limit: 30 },
@@ -36,7 +34,7 @@
 
 			console.log('customers');
 
-			var stripe = require('stripe')('sk_test_yours');
+			var stripe = require('stripe')(stripeApiSecretKey);
 
 			stripe.customers.list(
   				function(err, customers) {
@@ -59,7 +57,7 @@
 
 			console.log('coupons');
 
-			var stripe = require('stripe')('sk_test_yours');
+			var stripe = require('stripe')(stripeApiSecretKey);
 
 			stripe.coupons.list(
   				function(err, coupons) {
@@ -85,7 +83,7 @@
 
 			var couponId = req.params.couponId;
 
-			var stripe = require('stripe')('sk_test_yours');
+			var stripe = require('stripe')(stripeApiSecretKey);
 
 			stripe.coupons.retrieve(couponId,
   				function(err, coupon) {
@@ -118,14 +116,14 @@
 
   			
 
-			var stripe = require('stripe')('sk_test_yours');
+			var stripe = require('stripe')(stripeApiSecretKey);
 
 			// ember sends req.body
 			// { firstName: null, lastName: null, stripeToken: 'tok_17isuGGh9KUxDTDqJzg6Wg4m' }
 
 
 
-			stripe.customers.create({description: 'Customer time ', source: req.body.stripeToken, coupon: req.body.coupon},
+			stripe.customers.create({description: 'Customer for  '+req.body.email, email: req.body.email, source: req.body.stripeToken, coupon: req.body.coupon},
   				function(err, customerId) {
     				if(err) {
 
@@ -159,13 +157,20 @@
 
 			console.log(req.body.plan);
 
-			var stripe = require('stripe')('sk_test_yours');
+			var stripe = require('stripe')(stripeApiSecretKey);
 
 			// ember sends req.body
 			// { customer: 'cus_7yqbPhH5syR5Yp', plan: 'Monthy' }
 			// https://stripe.com/docs/api#create_subscription
 
-			stripe.customers.createSubscription(req.body.customer, {plan: req.body.plan, coupon: req.body.coupon},
+			var payload = {"plan": req.body.plan};
+
+			if (req.body.coupon) {
+				payload.coupon = req.body.coupon;
+			}
+
+
+			stripe.customers.createSubscription(req.body.customer, payload,
   				function(err, subscription) {
     				if(err) {
 

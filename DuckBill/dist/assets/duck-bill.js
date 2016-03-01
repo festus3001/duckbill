@@ -182,8 +182,9 @@ define('duck-bill/controllers/signup', ['exports', 'ember'], function (exports, 
     discountCode: '',
     total: 0,
 
-    fname: null,
-    lname: null,
+    fname: '',
+    lname: '',
+    email: 'dla223@flazeebo.com',
 
     number: '4012888888881881',
     cvc: '123',
@@ -235,8 +236,9 @@ define('duck-bill/controllers/signup', ['exports', 'ember'], function (exports, 
       },
       signup: function signup() {
         console.log(" signup called ");
+
         var self = this; // Store away current this
-        this.set('message', 'called');
+        this.set('message', 'signup');
 
         // let's get a token from stripe so we can get to business
         this.stripeCreateToken().then(function (response) {
@@ -538,6 +540,7 @@ define('duck-bill/models/coupon', ['exports', 'ember-data'], function (exports, 
 	// coupons {"object":"list","data":[{"id":"20off","object":"coupon","amount_off":null,"created":1456259259,"currency":null,"duration":"once","duration_in_months":null,"livemode":false,"max_redemptions":null,"metadata":{},"percent_off":20,"redeem_by":null,"times_redeemed":0,"valid":true},{"id":"10off","object":"coupon","amount_off":null,"created":1456259241,"currency":null,"duration":"once","duration_in_months":null,"livemode":false,"max_redemptions":null,"metadata":{},"percent_off":10,"redeem_by":null,"times_redeemed":0,"valid":true}],"has_more":false,"url":"/v1/coupons"}
 
 	exports['default'] = _emberData['default'].Model.extend({
+
 		amount_off: _emberData['default'].attr('number'),
 		percent_off: _emberData['default'].attr('number'),
 		redeem_by: _emberData['default'].attr('number')
@@ -1526,7 +1529,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("duck-bill/app")["default"].create({"name":"duck-bill","version":"0.0.0+396a40f7"});
+  require("duck-bill/app")["default"].create({"name":"duck-bill","version":"0.0.0+ae06ba56"});
 }
 
 /* jshint ignore:end */
