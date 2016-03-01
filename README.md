@@ -18,19 +18,14 @@
 * cd DuckBill
 * `npm install`
 * `bower install`
-* set up your stripe keys in 
-  *  app/routes.js
-	var stripe = require('stripe')('sk_test_yours');
-  * DuckBill/config/environment.js 
-	ENV.stripe = {
-        publishableKey: 'pk_test_yours'
-    };
+
+## Build it yourself
+
 
 
 ## Running / Development
 
 * It seems easiest to run the node server on one terminal:
-
 
 * `export NODE_ENV=development`
 * `export NODE_PORT=3000`
@@ -57,14 +52,15 @@
 * `ember build --environment=production --output-path=../public/` (production)
 
 
-## Further Reading / Useful Links
+## Background docs used to create this:
+* [ember.js](http://emberjs.com/)
+* [ember-cli](http://www.ember-cli.com/)
 * [stripe.js](https://stripe.com/docs/api#intro)
 
 
-## General subjects it might be good to have handy
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+
 

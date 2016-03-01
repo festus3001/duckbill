@@ -35,10 +35,6 @@ app.use(function(req, res, next) {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-// export NODE_ENV=development
-// export NODE_PORT=3000
-// export STRIPE_SECRET_KEY=sk_test_X2keZwa5QN16Tm3JDlvrP9sf
-// export STRIPE_PUBLISHABLE_KEY=pk_test_maDSH7v9wNjPxqiaXjfnOEBN
 
 stripeApiSecretKey = process.env.STRIPE_SECRET_KEY;
 stripeApiPublishableKey = process.env.STRIPE_PUBLISHABLE_KEY;
