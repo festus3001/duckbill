@@ -36,7 +36,7 @@
 * `export NODE_PORT=3000`
 * `export STRIPE_PUBLISHABLE_KEY=pk_test_yours`
 * `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit your app at [http://localhost:4200/signup](http://localhost:4200/signup).
 
 
 ### Running Tests
